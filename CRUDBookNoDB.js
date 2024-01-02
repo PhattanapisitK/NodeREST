@@ -29,12 +29,20 @@ let books = [
 ];
 
 // route to get all books
+<<<<<<< HEAD
 app.get('/books', (req, res) => {
+=======
+app.get('/books', (reg, res) => {
+>>>>>>> d83d99de10ad1ab1124871739b5ea40a5430f222
     res.json(books);
 });
 
 // route to get a book by id
+<<<<<<< HEAD
 app.get('/books/:id', (req, res) => {
+=======
+app.get('/books:id', (req, res) => {
+>>>>>>> d83d99de10ad1ab1124871739b5ea40a5430f222
     const book = books.find(b => b.id === parseInt(req.params.id));
     if (!book) res.status(404).send('Book not found');
     res.json(book);
@@ -52,7 +60,11 @@ app.post('/books', (req, res) => {
 });
 
 // route to update a book
+<<<<<<< HEAD
 app.put('/books/:id', (req, res) => {
+=======
+app.put('/books:id', (req, res) => {
+>>>>>>> d83d99de10ad1ab1124871739b5ea40a5430f222
     const book = books.find(b => b.id === parseInt(req.params.id));
     if (!book) res.status(404).send('Book not found');
     book.title = req.body.title;
@@ -61,7 +73,11 @@ app.put('/books/:id', (req, res) => {
 });
 
 // route to update a book
+<<<<<<< HEAD
 app.delete('/books/:id', (req, res) => {
+=======
+app.delete('/books:id', (req, res) => {
+>>>>>>> d83d99de10ad1ab1124871739b5ea40a5430f222
     const book = books.find(b => b.id === parseInt(req.params.id));
     if (!book) res.status(404).send('Book not found');
     const index = books.indexOf(book);
