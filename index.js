@@ -9,8 +9,7 @@ const bodyParser = require("body-parser");
 
 // Database connection
 mongoose.connect(
-    //"mongodb://admin:VYKova92146@node57535-phattanapisitk.proen.app.ruk-com.cloud:11765",
-    "http://localhost:3000",
+    "mongodb://admin:VYKova92146@node57535-phattanapisitk.proen.app.ruk-com.cloud",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -24,7 +23,7 @@ const Book = mongoose.model("Book", {
         required: true, // If you want "id" to be required
     },
     title: String,
-    uthor: String,
+    author: String,
 });
 
 const app = express();
