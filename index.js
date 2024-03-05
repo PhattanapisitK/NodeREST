@@ -4,6 +4,7 @@
 // Test with Postman
 
 const express = require("express");
+const Sequelize = require('sequelize');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
@@ -28,6 +29,8 @@ const Book = mongoose.model("Book", {
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.json());
+app.use(cors());
 
 // Create
 app.post("/books", async (req, res) => {
